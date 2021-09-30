@@ -13,6 +13,7 @@ namespace InCamp_Test_Task
         const string Delimeter = ",";
         const string DefaultValue = "0";
         const string Keyword = "Employee Name";
+        const string Keyword_2 = "Name / Date";
 
         static List<string> prepareData(List<Employee> employees)
         {
@@ -45,7 +46,7 @@ namespace InCamp_Test_Task
                 }
             }
 
-            data[0, 0] = "Name/Date";
+            data[0, 0] = Keyword_2;
 
             int counter = 1;
             foreach (var n in names)
@@ -70,6 +71,7 @@ namespace InCamp_Test_Task
                         if (em.getName() == data[i, 0] && em.getDate() == data[0, j])
                         {
                             data[i, j] = em.getHours();
+                            continue;
                         }
                     }
                 }
