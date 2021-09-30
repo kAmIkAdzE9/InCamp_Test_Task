@@ -29,7 +29,7 @@ namespace InCamp_Test_Task
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception: " + e);
+                Console.WriteLine("Exception: " + e.Message);
             }
             return input_data;
         }
@@ -49,7 +49,7 @@ namespace InCamp_Test_Task
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception: " + e);
+                Console.WriteLine("Exception: " + e.Message);
             }
         }
     }
