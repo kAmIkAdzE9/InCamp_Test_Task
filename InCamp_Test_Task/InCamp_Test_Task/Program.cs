@@ -17,6 +17,14 @@ namespace InCamp_Test_Task
 
         static List<string> prepareData(List<Employee> employees)
         {
+            List<string> output = new List<string>();
+
+            if(employees.Count == 0)
+            {
+                Console.WriteLine("The input list is empty");
+                return output;
+            }
+
             if (employees.First().getName() == Keyword)
             {
                 employees.RemoveAt(0);
@@ -77,8 +85,6 @@ namespace InCamp_Test_Task
                 }
             }
 
-            List<string> output = new List<string>();
-
             for (int i = 0; i <= names.Count; i++)
             {
                 string row = "";
@@ -97,6 +103,7 @@ namespace InCamp_Test_Task
         {
             List<string> data = prepareData(CSVManager.readCSV(InputPath, Delimeter));
             CSVManager.writeCSV(OutputPath, data);
+            Console.ReadKey();
         }
     }
 }
